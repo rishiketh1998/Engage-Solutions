@@ -98,8 +98,8 @@ export const Navbar = ({
                   <NavItem
                     to={page.pageRoute}
                     color={"black"}
-                    activeColor={"black"}
-                    activeBorderBottom={"2px solid black"}
+                    activecolor={"black"}
+                    activeborderbottom={"2px solid black"}
                     height="auto"
                   >
                     {page.pageName}
@@ -139,8 +139,8 @@ export const Navbar = ({
               color: "#fff",
               height: "80px",
               fontSize: "16px",
-              activeColor: "#fff",
-              activeBorderBottom: "2px solid #fff",
+              activecolor: "#fff",
+              activeborderbottom: "2px solid #fff",
             }}
             handleLinkClick={handleCloseNavMenu}
           />

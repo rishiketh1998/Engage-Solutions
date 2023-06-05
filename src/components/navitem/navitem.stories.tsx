@@ -51,6 +51,6 @@ export const PrimaryNavItemCustomActiveColors = (args: NavItemProps) => (
 
 PrimaryNavItemCustomActiveColors.args = {
   ...PrimaryNavItem.args,
-  activeColor: "blue",
-  activeBorderBottom: "2px solid blue",
+  activecolor: "blue",
+  activeborderbottom: "2px solid blue",
 };

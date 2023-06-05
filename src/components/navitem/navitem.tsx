@@ -10,8 +10,8 @@ import { NavLink, NavLinkProps } from "react-router-dom";
 //  * @property {string} fontSize - Sets font size of navigation link
 //  */
 export interface NavItemProps extends NavLinkProps {
-  activeColor?: string;
-  activeBorderBottom?: string;
+  activecolor?: string;
+  activeborderbottom?: string;
   height?: string;
   fontSize?: string;
 }
@@ -34,9 +34,9 @@ export const NavItem = styled((props: NavItemProps) => <NavLink {...props} />)`
   text-decoration: none;
   border-radius: 0;
   &.active {
-    color: ${(props) => (props.activeColor ? props.activeColor : "#fff")};
+    color: ${(props) => (props.activecolor ? props.activecolor : "#fff")};
     border-bottom: ${(props) =>
-      props.activeBorderBottom ? props.activeBorderBottom : `2px solid #fff`};
+      props.activeborderbottom ? props.activeborderbottom : `2px solid #fff`};
     font-weight: 900;
   }
 `;

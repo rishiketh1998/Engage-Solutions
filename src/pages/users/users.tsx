@@ -1,9 +1,9 @@
+import { Outlet } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import { LinearProgress, Alert, Pagination } from "@mui/material";
 import { Dashboard } from "../../components/dashboard/dashboard";
 import { useQuery } from "react-query";
-import { Outlet } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 
 /**
  * @description: Users page is the parent component to view all users information.
@@ -52,7 +52,7 @@ export const Users = () => {
     return data;
   };
 
-  if (isLoading) return <LinearProgress />;
+  if (isLoading) return <LinearProgress data-testid="linear-progress" />;
 
   if (error instanceof Error)
     return <Alert severity="error">{error.message}</Alert>;
@@ -67,6 +67,7 @@ export const Users = () => {
             sx={{ mt: "20px", display: "flex", justifyContent: "center" }}
             count={data.meta.last_page}
             page={page}
+            data-testid="pagination"
             onChange={(e, page) => setPage(page)}
           />
         </>
