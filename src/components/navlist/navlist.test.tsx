@@ -1,4 +1,4 @@
-import { render, screen, fireEvent, cleanup } from "@testing-library/react";
+import { render, screen, cleanup } from "@testing-library/react";
 import { NavList, NavListProps } from "./navlist";
 import { describe } from "vitest";
 import { MemoryRouter } from "react-router-dom";
