@@ -42,8 +42,8 @@ PrimaryNavList.args = {
     color: "#fff",
     height: "80px",
     fontSize: "16px",
-    activeColor: "#fff",
-    activeBorderBottom: "2px solid #fff",
+    activecolor: "#fff",
+    activeborderbottom: "2px solid #fff",
   },
   testid: "primary-navlist",
 };

@@ -1,4 +1,4 @@
-import { Paper, Grid, Typography, Button } from "@mui/material";
+import { Paper, Grid, Typography, Button, Alert } from "@mui/material";
 import { useLocation } from "react-router-dom";
 import { ArrowCircleLeftOutlined } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
@@ -10,8 +10,14 @@ import { useNavigate } from "react-router-dom";
  */
 export const UserDetail = () => {
   const { state } = useLocation();
-  const { userData } = state;
   const navigate = useNavigate();
+  if (state?.userData === undefined)
+    return (
+      <Alert severity="error">
+        Somthing went wrong, cannot get user detail.
+      </Alert>
+    );
+  const userData = state.userData;
   return (
     <>
       <Grid container spacing={2}>
