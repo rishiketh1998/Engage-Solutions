@@ -1,5 +1,6 @@
 import { Table, TableBody, TableCell, TableRow, Paper } from "@mui/material";
 import { ArrowCircleRightOutlined } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 
 export interface DashboardProps {
   testid?: string;
@@ -7,6 +8,7 @@ export interface DashboardProps {
 }
 
 export const Dashboard = ({ testid = "dashboard", data }: DashboardProps) => {
+  const navigate = useNavigate();
   const tableHeaders = [
     "ID",
     "First Name",
@@ -66,7 +68,20 @@ export const Dashboard = ({ testid = "dashboard", data }: DashboardProps) => {
                     {header !== "More Info" ? (
                       row[header.toLowerCase().replace(/\s/g, "_")]
                     ) : (
-                      <ArrowCircleRightOutlined color="primary" />
+                      <ArrowCircleRightOutlined
+                        sx={{
+                          cursor: "pointer",
+                        }}
+                        color="primary"
+                        onClick={() =>
+                          navigate(`/users/${row.id}`, {
+                            state: {
+                              userData: row,
+                              id: row.id,
+                            },
+                          })
+                        }
+                      />
                     )}
                   </TableCell>
                 ))}
