@@ -20,6 +20,11 @@ export interface NavbarProps {
   testId?: string;
 }
 
+/**
+ * @description: Navbar component is used to render the navbar and display all pages.
+ * @param param0: NavbarProps
+ * @returns: JSX.Element
+ */
 export const Navbar = ({
   pages,
   logoTitle,

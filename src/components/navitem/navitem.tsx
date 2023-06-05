@@ -16,6 +16,11 @@ export interface NavItemProps extends NavLinkProps {
   fontSize?: string;
 }
 
+/**
+ * @description NavItem is a wrapper component for NavLink component
+ * @param {NavItemProps} props
+ * @returns {JSX.Element}
+ */
 export const NavItem = styled((props: NavItemProps) => <NavLink {...props} />)`
   color: ${(props) => (props.color ? props.color : "#fff")};
   height: ${(props) => (props.height ? props.height : "80px")};

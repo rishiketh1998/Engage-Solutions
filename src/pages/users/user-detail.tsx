@@ -3,6 +3,11 @@ import { useLocation } from "react-router-dom";
 import { ArrowCircleLeftOutlined } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 
+/**
+ * @description: UserDetail is the page used to render individual user details.
+ * @returns JSX.Element
+ * @example <UserDetail />
+ */
 export const UserDetail = () => {
   const { state } = useLocation();
   const { userData } = state;

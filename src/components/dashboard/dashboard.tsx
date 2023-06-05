@@ -2,11 +2,21 @@ import { Table, TableBody, TableCell, TableRow, Paper } from "@mui/material";
 import { ArrowCircleRightOutlined } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 
+/**
+ * @description: Interface for Dashboard component props.
+ * @property {string} testid - Sets custom data-testid for the Dashboard component
+ * @property {Array} data - Array of objects containing user information
+ */
 export interface DashboardProps {
   testid?: string;
   data: any[] | undefined;
 }
 
+/**
+ * @description: Dashboard component is used to render the dashboard table and display all user information.
+ * @param param0: DashboardProps
+ * @returns: JSX.Element
+ */
 export const Dashboard = ({ testid = "dashboard", data }: DashboardProps) => {
   const navigate = useNavigate();
   const tableHeaders = [
